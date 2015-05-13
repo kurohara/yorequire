@@ -1,13 +1,19 @@
 # yorequire
 
-Your Own require function.
+You can use Your Own 'require' function.  
+If you want to hook the 'require' function, you can use yorequire.
 
 ## Getting Started
-Install the module with: `npm install yorequire`
+Install the module with: `npm install kurohara/yorequire`
 
 ```javascript
 var yorequire = require('yorequire');
-yorequire.awesome(); // "awesome"
+yorequire.setCB(function(name, o_require, data) {
+  // you can do anything you like.
+  // 'o_require' is original require function. 
+  return o_require(name);
+}, yourdata);
+yorequire.enable(true);
 ```
 
 ## Documentation
