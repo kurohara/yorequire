@@ -44,6 +44,7 @@ exports['test1'] = {
     yorequire.enable(true);
 
     var obj = require('xxxx');
-    obj.print(obj.inspect(obj) + "\n");
+	test.ok(obj);
+	test.done();
   },
 };
