@@ -4,7 +4,7 @@ You can use Your Own 'require' function.
 If you want to hook the 'require' function, you can use yorequire.
 
 ## Getting Started
-Install the module with: `npm install kurohara/yorequire`
+Install the module with: `npm install yorequire --save`
 
 ```javascript
 var yorequire = require('yorequire');
