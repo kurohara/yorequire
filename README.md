@@ -8,11 +8,14 @@ Install the module with: `npm install kurohara/yorequire`
 
 ```javascript
 var yorequire = require('yorequire');
-yorequire.setCB(function(name, o_require, data) {
+yorequire.set(function(name, o_require, data) {
   // you can do anything you like.
+  // 'name' is the module name which have requested.
   // 'o_require' is original require function. 
+  // 'data' argument is the data that have passed to yorequire.set() as second argument.
   return o_require(name);
 }, yourdata);
+// calling 'set' function enables inner flag by default, so you do not have to call enable(true);
 yorequire.enable(true);
 ```
 

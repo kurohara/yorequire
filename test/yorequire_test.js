@@ -33,7 +33,7 @@ exports['test1'] = {
     // tests here
     var myData = { val1: "abc" };
     // var check = 0;
-    yorequire.setCB(function(name, o_require, data) {
+    yorequire.set(function(name, o_require, data) {
       if (name === 'xxxx') {
         data.val1 = "xyz";
         return o_require('sys');
@@ -41,7 +41,7 @@ exports['test1'] = {
         return o_require(name);
       }
     }, myData);
-    yorequire.enable(true);
+    // yorequire.enable(true);
 
     var obj = require('xxxx');
 	test.ok(obj);
